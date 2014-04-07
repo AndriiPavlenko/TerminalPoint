@@ -1,0 +1,27 @@
+Simple point of terminal.
+
+Product Code Price 
+------------ ----- 
+A $1.25 each or 3 for $3.00 
+B $4.25
+C $1.00 or $5 for a six pack 
+D $0.75 
+
+The interface at the top level PointOfSaleTerminal service object  looks like this. 
+
+PointOfSaleTerminal terminal = new PointOfSaleTerminal(); 
+
+terminal.setPricing(...); 
+
+terminal.scan("A"); 
+
+terminal.scan("C"); 
+
+BigDecimal result = terminal.calculateTotal(); 
+
+ 
+ Here are the minimal inputs in the test cases: 
+
+ Scan these items in this order: ABCDABA; Verify the total price is $13.25. 
+ Scan these items in this order: CCCCCCC; Verify the total price is $6.00. 
+ Scan these items in this order: ABCD; Verify the total price is $7.25
