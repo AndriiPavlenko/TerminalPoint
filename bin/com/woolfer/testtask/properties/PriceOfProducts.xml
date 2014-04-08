@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <listOfProducts>
-    <A price = "1.25" numberofwholesaleproducts = "3" wholesaleprice = "3.00"/>
+    <A price = "1.05" numberofwholesaleproducts = "3" wholesaleprice = "2.50"/>
 	<B price = "4.25"/>
-	<C price = "1" numberofwholesaleproducts = "6" wholesaleprice = "5"/>
-	<D price = "0.75"/>
+	<C price = "4" numberofwholesaleproducts = "3" wholesaleprice = "10"/>
+	<D price = "2.12"/>
 </listOfProducts>
