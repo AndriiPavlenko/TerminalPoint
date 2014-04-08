@@ -17,14 +17,14 @@ public class testPointOfSaleTerminal {
 		
 		terminal = new PointOfSaleTerminal();
 		terminal.setPricing();
-		terminal.scan("A");
 		terminal.scan("B");
-		terminal.scan("C");
+		terminal.scan("B");
+		terminal.scan("B");
 		terminal.scan("D");
 		terminal.scan("D");
 		terminal.scan("B");
 		terminal.scan("A");
-		assertEquals("ABCDDBA", terminal.stringOfScanProduct());
+		assertEquals("BBBDDBA", terminal.stringOfScanProduct());
 	}
 
 	@Test
@@ -32,14 +32,14 @@ public class testPointOfSaleTerminal {
 		
 		terminal = new PointOfSaleTerminal();
 		terminal.setPricing();
-		terminal.scan("A");
+		terminal.scan("C");
 		terminal.scan("B");
 		terminal.scan("C");
 		terminal.scan("D");
 		terminal.scan("A");
 		terminal.scan("B");
 		terminal.scan("A");
-		assertEquals(BigDecimal.valueOf(13.25), terminal.calculateTotal());
+		assertEquals(BigDecimal.valueOf(20.72), terminal.calculateTotal());
 	}
 	
 	@Test
@@ -54,7 +54,7 @@ public class testPointOfSaleTerminal {
 		terminal.scan("C");
 		terminal.scan("C");
 		terminal.scan("C");
-		assertEquals(BigDecimal.valueOf(6).setScale(2, BigDecimal.ROUND_UP), terminal.calculateTotal());
+		assertEquals(BigDecimal.valueOf(24).setScale(2, BigDecimal.ROUND_UP), terminal.calculateTotal());
 	}
 	
 	@Test
@@ -66,7 +66,7 @@ public class testPointOfSaleTerminal {
 		terminal.scan("B");
 		terminal.scan("C");
 		terminal.scan("D");
-		assertEquals(BigDecimal.valueOf(7.25), terminal.calculateTotal());
+		assertEquals(BigDecimal.valueOf(11.42), terminal.calculateTotal());
 	}
 	
 
